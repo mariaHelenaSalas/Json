@@ -1,11 +1,12 @@
 package com.crudgestor;
 
+
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import com.crudgestor.Person;
 
-import com.agendapp.Person;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -64,11 +65,11 @@ public class PersonService {
     }
 
     // 🔹 Actualizar una persona
-    public void actualizarPerson(int id, String nombre, String telefono, String email) {
+    public void actualizarPerson(int id, String nombre, String nuevoTelefono, String email) {
         if (persons.containsKey(id)) {
             Person person = persons.get(id);
             person.setNombre(nombre);
-            person.setTelefono(telefono);
+            person.setTelefono(nuevoTelefono);
             person.setEmail(email);
             guardarPersons();
             System.out.println("✅ Persona actualizada.");

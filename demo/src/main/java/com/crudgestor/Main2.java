@@ -1,11 +1,12 @@
 package com.crudgestor;
 
+
 import java.util.Scanner;
+import com.crudgestor.PersonService;
 
-public class main {
-
+public class Main2 {
     public static void main(String[] args) {
-        PersonService servicio = new PersonService();
+       PersonService servicio = new PersonService();
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
